@@ -82,7 +82,7 @@ let emails = runners.map(x => x.email);
 console.log(emails);
 
 // Problem 2: The people in charge want to know the average amount that our runners contributed. Log it.
-let avg = `The average amount contributed by the runners is \$${runners.map(x => x.donation).reduce((x, y) => x + y) / 50}.`;
+let avg = `The average amount contributed by the runners is \$${runners.map(x => x.donation).reduce((x, y) => x + y) / runners.length}.`;
 console.log(avg);
 
 // Problem 3: The companies are curious as to which of their employees attended this event and contributed. Create an array that contains each employee's first and last name, their company, and how much they contributed and then log the result
