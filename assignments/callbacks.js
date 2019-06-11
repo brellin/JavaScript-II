@@ -23,36 +23,36 @@ const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
   });
 
 */
-function callback(result){
+function callback(result) {
   console.log(result);
 }
 
 function getLength(arr, cb) {
-  return cb(arr.length);
+  return
   // getLength passes the length of the array into the callback.
 }
 getLength(items, callback);
 
 function last(arr, cb) {
-  return cb(arr[arr.length - 1])
+  return
   // last passes the last item of the array into the callback.
 }
 last(items, callback);
 
 function sumNums(x, y, cb) {
-  return cb(x + y);
+  return
   // sumNums adds two numbers (x, y) and passes the result to the callback.
 }
 sumNums(5, 6, callback);
 
 function multiplyNums(x, y, cb) {
-  return cb(x * y);
+  return
   // multiplyNums multiplies two numbers and passes the result to the callback.
 }
 multiplyNums(5, 6, callback);
 
 function contains(item, list, cb) {
-  return list.includes(item) ? cb(true) : cb(false);
+  return
   // contains checks if an item is present inside of the given array/list.
   // Pass true to the callback if it is, otherwise pass false.
 }
@@ -61,9 +61,9 @@ contains('Pencil', items, callback);
 /* STRETCH PROBLEM */
 
 function removeDuplicates(array, cb) {
-  return cb(array.filter((x, y, z) => z.indexOf(x) === y));
+  return
   // removeDuplicates removes all duplicate values from the given array.
   // Pass the duplicate free array to the callback function.
   // Do not mutate the original array.
 }
-removeDuplicates([1,2,3,3,3,4,5,6], callback);
+removeDuplicates([1, 2, 3, 3, 3, 4, 5, 6], callback);
