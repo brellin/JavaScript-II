@@ -1,11 +1,11 @@
 // ==== Challenge 1: Write your own closure ====
 // Write a simple closure of your own creation.  Keep it simple!
-function func(){
+function func() {
   let closureText = `This is the text for the closure`;
-  function subFunc(){
+  function subFunc() {
     console.log(`Herein contains the closure text: (${closureText})`);
   }
-  subFunc();
+  return subFunc();
 }
 func()
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
@@ -17,6 +17,7 @@ const counter = (x) => {
   let newCounter = x => ++x;
   console.log(newCounter(x));
 };
+
 counter(0);
 // Example usage: const newCounter = counter();
 // newCounter(); // 1
@@ -31,4 +32,11 @@ const counterFactory = (x) => {
     increment: x => ++x,
     decrement: x => --x
   }
+
+  return {
+    increment: obj.increment(x),
+    decrement: obj.decrement(x)
+  }
 };
+
+console.log(counterFactory(0))
